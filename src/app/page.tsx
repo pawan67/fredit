@@ -23,7 +23,6 @@ export default function Home() {
               </p>
             </div>
             <Link
-              
               href="/r/create"
               className={buttonVariants({
                 className: " w-full mt-4 mb-6",
