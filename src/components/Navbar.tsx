@@ -4,7 +4,7 @@ import { Icons } from "./Icons";
 import { buttonVariants } from "./ui/Button";
 import { getAuthSession } from "@/lib/auth";
 import UserAccountNav from "./UserAccountNav";
-import { Search } from "lucide-react";
+import { Search, LogInIcon } from "lucide-react";
 import SearchBar from "./SearchBar";
 
 const Navbar = async () => {
@@ -30,7 +30,8 @@ const Navbar = async () => {
           <UserAccountNav user={session.user} />
         ) : (
           <Link href="/sign-in" className={buttonVariants()}>
-            Sign In
+            <span className=" hidden sm:block">Sign In</span>
+            <LogInIcon className=" sm:ml-2" size={16} />
           </Link>
         )}
       </div>

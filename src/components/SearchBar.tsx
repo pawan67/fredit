@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/command";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 import { Users } from "lucide-react";
+import Link from "next/link";
 
 interface SearchBarProps {}
 
@@ -67,7 +68,6 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
       className="relative rounded-lg border max-w-lg z-50 overflow-visible"
     >
       <CommandInput
-        isLoading={isFetching}
         onValueChange={(text) => {
           setInput(text);
           debounceRequest();
@@ -92,7 +92,7 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
                   value={subreddit.name}
                 >
                   <Users className="mr-2 h-4 w-4" />
-                  <a href={`/r/${subreddit.name}`}>r/{subreddit.name}</a>
+                  <Link href={`/r/${subreddit.name}`}>r/{subreddit.name}</Link>
                 </CommandItem>
               ))}
             </CommandGroup>
