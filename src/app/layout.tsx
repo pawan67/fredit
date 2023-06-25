@@ -29,7 +29,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-screen pt-12 bg-slate-50 antialiased">
-        <NextTopLoader showSpinner={false} color="#FFC26F" />
+        <NextTopLoader showSpinner={false} color="#333333" />
         <Providers>
           {/* @ts-expect-error server component */}
           <Navbar />

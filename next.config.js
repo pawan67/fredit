@@ -6,7 +6,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  // ignore ts build errors
+  
   typescript: {
     ignoreBuildErrors: true,
   },
