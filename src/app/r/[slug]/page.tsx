@@ -12,6 +12,7 @@ interface PageProps {
   };
 }
 
+export const dynamic = "force-dynamic";
 async function SubRedditPage({ params }: PageProps) {
   const { slug } = params;
   const session = await getAuthSession();
@@ -27,6 +28,10 @@ async function SubRedditPage({ params }: PageProps) {
           votes: true,
           comments: true,
           subreddit: true,
+        },
+
+        orderBy: {
+          createdAt: "desc",
         },
         take: INFINITE_SCROLLING_PAGINATION_RESULTS,
       },

@@ -3,14 +3,14 @@
 ### A fullstack Reddit clone built with Next JS 13, Prisma, TypeScript, and Tailwind CSS.
 
 ## Features 
--  [x] Setup
+-   [x] Setup
 -   [x] User authentication
 -   [x] Creating & joining subreddits
 -   [x] Create posts
--   [ ] Displaying posts in feed & optimizations
--   [ ] Upvote/downvote posts and comments
--   [ ] Create & voting for comments
--   [ ] Search bar
+-   [x] Displaying posts in feed & optimizations
+-   [x] Upvote/downvote posts 
+-   [x] Create & voting for comments
+-   [x] Search bar
 -   [ ] Deployment
 
 

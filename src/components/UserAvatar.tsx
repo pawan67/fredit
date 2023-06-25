@@ -7,12 +7,17 @@ interface UserAvatarProps {
   user: Pick<User, "name" | "image">;
 }
 
-const UserAvatar: FC<UserAvatarProps> = ({ user }) => {
+const UserAvatar: FC<UserAvatarProps> = ({ user, ...props }) => {
   return (
-    <Avatar>
+    <Avatar {...props}>
       {user.image ? (
         <div className=" relative aspect-square h-full w-full">
-          <Image alt="profile" src={user.image} fill referrerPolicy="no-referrer" />
+          <Image
+            alt="profile"
+            src={user.image}
+            fill
+            referrerPolicy="no-referrer"
+          />
         </div>
       ) : (
         <AvatarFallback>{user.name ? user.name[0] : null}</AvatarFallback>

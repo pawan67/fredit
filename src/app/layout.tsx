@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/Toaster";
 import Providers from "@/components/Providers";
+import NextTopLoader from "nextjs-toploader";
+
 export const metadata = {
   title: "Freddit",
   description: "A Reddit clone built with Next.js and TypeScript.",
@@ -27,6 +29,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-screen pt-12 bg-slate-50 antialiased">
+        <NextTopLoader color="green" />
         <Providers>
           {/* @ts-expect-error server component */}
           <Navbar />
